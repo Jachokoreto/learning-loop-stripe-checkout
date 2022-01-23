@@ -12,8 +12,8 @@
         const { error } = await stripe.redirectToCheckout({
             lineItems: [{ price, quantity: 1 }],
             mode: 'payment',
-            successUrl:'https://learning-loop-stripe-checkout.vercel.app/success',
-            cancelUrl: 'https://learning-loop-stripe-checkout.vercel.app/cancel',
+            successUrl:'http://localhost:8080',
+            cancelUrl: 'http://localhost:8080',
         });
 
         if (error) {
